@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DisconDude — Your campus, a little cheaper.</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+
+  <!-- Production Stylesheet -->
+  <link rel="stylesheet" href="output.css" />
+</head>
+<body class="bg-warmBeige text-darkBrown font-sans antialiased selection:bg-terracotta selection:text-cream overflow-x-hidden">
+
+<aside aria-label="Announcement" class="bg-terracotta text-cream text-xs font-bold py-2.5 text-center tracking-widest uppercase px-4 flex items-center justify-center gap-2">
+  <span>🎒 PRIVATE CAMPUS BETA DROPPING SOON</span>
+  <span class="hidden sm:inline">• VERIFY .AC.IN EMAIL FOR THE "FOUNDING FAN" BADGE</span>
+</aside>
+
+<header class="sticky top-0 z-50 bg-deepForest/95 backdrop-blur-md border-b border-olive/30 shadow-md">
+  <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+    <a href="#" class="flex items-center gap-3">
+      <div class="w-11 h-11 bg-cream rounded-2xl border-2 border-darkBrown/20 flex items-center justify-center text-xl shadow-inner">🏷️</div>
+      <div>
+        <span class="text-2xl font-serif tracking-wide text-cream">Discon<span class="text-warmBeige italic">Dude</span></span>
+        <span class="block text-[10px] text-sage font-mono font-bold tracking-widest uppercase -mt-1">CAMPUS BETA</span>
+      </div>
+    </a>
+    <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-sage" aria-label="Main">
+      <a href="#drops" class="hover:text-warmBeige transition">Launch Drops</a>
+      <a href="#radar" class="hover:text-warmBeige transition">Campus Radar</a>
+      <a href="#how" class="hover:text-warmBeige transition">How It Works</a>
+      <a href="#pass" class="hover:text-warmBeige transition">Student Pass</a>
+      <a href="#partners" class="hover:text-warmBeige transition">For Cafes</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <a href="#vibe-check-card" class="bg-terracotta hover:bg-terracottaHover text-cream font-bold px-5 py-2.5 rounded-full text-xs md:text-sm tracking-wide transition shadow-lg inline-block">Join Waitlist</a>
+      <!-- Mobile menu -->
+      <details class="md:hidden relative">
+        <summary class="list-none cursor-pointer w-10 h-10 flex items-center justify-center rounded-full border border-olive/50 text-cream text-xl" aria-label="Open menu">☰</summary>
+        <div class="absolute right-0 mt-3 w-52 bg-cream text-deepForest border-2 border-darkBrown rounded-2xl shadow-xl p-2 text-sm font-semibold">
+          <a href="#drops" class="block px-3 py-2 rounded-xl hover:bg-warmBeige">Launch Drops</a>
+          <a href="#radar" class="block px-3 py-2 rounded-xl hover:bg-warmBeige">Campus Radar</a>
+          <a href="#how" class="block px-3 py-2 rounded-xl hover:bg-warmBeige">How It Works</a>
+          <a href="#pass" class="block px-3 py-2 rounded-xl hover:bg-warmBeige">Student Pass</a>
+          <a href="#partners" class="block px-3 py-2 rounded-xl hover:bg-warmBeige">For Cafes</a>
+        </div>
+      </details>
+    </div>
+  </div>
+</header>
+
+<!-- 1. HERO -->
+<section class="bg-deepForest text-cream relative pt-14 pb-28 lg:pt-20 lg:pb-36 overflow-hidden border-b-4 border-darkBrown">
+  <div class="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-olive/20 rounded-full blur-[140px] pointer-events-none"></div>
+  <div class="max-w-7xl mx-auto px-6 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+
+    <div class="lg:col-span-7 space-y-8 text-center lg:text-left">
+      <div class="inline-flex items-center gap-2.5 bg-cream/10 border border-warmBeige/30 px-4 py-2 rounded-full text-xs font-bold text-warmBeige tracking-wider uppercase">
+        <span class="w-2.5 h-2.5 rounded-full bg-mutedGold animate-ping"></span>
+        Rollout starting at IIIT Kottayam & neighboring campus spots
+      </div>
+      <h1 class="text-5xl sm:text-6xl xl:text-7xl font-serif leading-[1.08] text-cream">
+        Your campus, <br />
+        <span class="italic text-warmBeige underline decoration-terracotta underline-offset-8">a little cheaper.</span>
+      </h1>
+      <p class="text-lg sm:text-xl text-sage max-w-xl mx-auto lg:mx-0 leading-relaxed">
+        Secret spots near your hostel, tea stalls, and cafes worth the hype. Flash your screen at the counter, get instant discounts, and never pay full price again.
+      </p>
+
+      <div id="vibe-check-card" class="relative max-w-lg mx-auto lg:mx-0 pt-20">
+        <!-- Mascot -->
+        <div class="absolute -top-6 right-2 sm:right-6 z-20 flex items-end gap-2 select-none pointer-events-none max-w-full">
+          <div id="mascotSpeech" aria-hidden="true" class="bg-cream text-darkBrown border-2 border-darkBrown px-3 py-2 rounded-2xl shadow-xl text-[11px] sm:text-xs font-bold max-w-[150px] sm:max-w-[210px] transform -rotate-3 transition-all duration-300 text-left">
+            "psst... what's your college email?"
+          </div>
+          <div class="relative w-20 h-24 sm:w-32 sm:h-36 flex-shrink-0 flex items-end justify-center">
+            <img id="guardImg" src="mascot-peek.png" alt="" class="w-full h-full object-contain drop-shadow-[0_8px_16px_rgba(0,0,0,0.5)] transition-all duration-300" />
+            <span id="guardFallback" class="hidden text-6xl sm:text-7xl" aria-hidden="true">👀</span>
+          </div>
+        </div>
+
+        <div id="formCard" class="bg-cream text-darkBrown p-6 sm:p-7 rounded-3xl border-4 border-darkBrown shadow-2xl relative z-10">
+          <div id="cardBody">
+            <div class="flex items-center justify-between mb-3 gap-2">
+              <span id="badgeStatus" class="bg-warmBeige border border-darkBrown/20 text-deepForest text-[10px] font-mono font-bold uppercase px-3 py-1 rounded-full">🔒 STUDENT PASS GATE</span>
+              <span class="text-xs font-mono text-darkBrown/70 font-bold">IIITK & BEYOND</span>
+            </div>
+
+            <form id="waitlistForm" novalidate class="space-y-3">
+              <div>
+                <label for="studentEmail" class="sr-only">College email</label>
+                <input type="email" id="studentEmail" required autocomplete="email" placeholder="Enter college email (e.g. name@iiitk.ac.in)"
+                  class="w-full bg-warmBeige/40 border-2 border-darkBrown/30 px-4 py-3.5 rounded-2xl text-sm font-semibold text-darkBrown placeholder:text-darkBrown/60 focus:outline-none focus:border-deepForest transition" />
+              </div>
+              <button type="submit" id="submitBtn" class="w-full bg-terracotta hover:bg-terracottaHover text-cream font-bold text-sm py-4 rounded-2xl transition flex items-center justify-center gap-2 shadow-md uppercase tracking-wider">
+                <span>Reserve My Student Pass</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              </button>
+            </form>
+
+            <p id="feedbackText" aria-live="polite" class="text-xs font-semibold mt-3 text-darkBrown/80">
+              Only <span class="font-mono font-bold text-deepForest">.ac.in</span> or official university emails unlock the Founding Fan badge.
+            </p>
+
+            <button type="button" id="noCollegeBtn" class="mt-2 text-xs font-semibold text-deepForest underline hover:text-terracotta">
+              My college doesn't have a .ac.in email
+            </button>
+
+            <p class="mt-4 pt-3 border-t border-darkBrown/10 text-[11px] text-darkBrown/70">
+              We only use your email to send your pass link and launch updates. No spam, no selling your data.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sample pass mockup -->
+    <div class="lg:col-span-5 relative flex flex-col items-center justify-center">
+      <model-viewer class="food w-60 h-[26rem] sm:w-72 sm:h-[32rem] -mb-16 relative z-20 pointer-events-none select-none" src="models/milkshake.glb" poster="milkshake.png" alt="Retro milkshake" loading="eager" camera-orbit="0deg 82deg auto" interpolation-decay="60" environment-image="neutral" exposure="1.15" shadow-intensity="0.8" shadow-softness="1" disable-zoom disable-pan interaction-prompt="none" data-pitch="82" data-k="0" style="display:block;--poster-color:transparent;background:transparent"><img src="milkshake.png" alt="Retro milkshake" class="w-full h-full object-contain" /></model-viewer>
+      <div class="relative w-full max-w-[370px] bg-cream text-darkBrown border-4 border-darkBrown rounded-[44px] p-5 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.5)]">
+        <div class="flex items-center justify-between pb-3 border-b border-darkBrown/15 mb-4">
+          <div>
+            <span class="text-[10px] text-olive font-mono uppercase font-bold tracking-wider">Campus Pass • Sample</span>
+            <p class="font-bold text-sm">Your Name • Your Campus</p>
+          </div>
+          <span class="bg-warmBeige border border-darkBrown/20 text-deepForest text-xs font-mono font-bold px-2.5 py-1 rounded-full">⚡ 50 XP</span>
+        </div>
+
+        <div class="ticket-cutout cutout-beige bg-warmBeige p-6 rounded-3xl border-2 border-darkBrown shadow-md transform rotate-1">
+          <div class="flex justify-between items-start">
+            <div>
+              <span class="bg-deepForest text-cream text-[10px] font-bold uppercase px-2 py-0.5 rounded tracking-wide">FOUNDING PARTNER</span>
+              <h3 class="text-2xl font-serif mt-2 text-deepForest">Maya's Pizzeria</h3>
+              <p class="text-xs text-darkBrown/80 font-medium">Your student deal shows up here</p>
+            </div>
+            <div class="text-right">
+              <span class="text-3xl font-serif text-terracotta">DEAL</span>
+              <span class="block text-[10px] font-bold uppercase">AT LAUNCH</span>
+            </div>
+          </div>
+          <div class="border-b-2 border-dashed border-darkBrown/30 my-4 relative">
+            <span class="absolute left-1/2 -translate-x-1/2 -top-2 bg-warmBeige px-2 text-[9px] font-mono uppercase tracking-widest text-darkBrown/80 font-bold">TEAR AT COUNTER</span>
+          </div>
+          <div class="flex items-center justify-between text-xs font-bold">
+            <span class="font-mono text-[10px] text-olive">VALID TILL 10 PM</span>
+            <span class="bg-terracotta text-cream text-[10px] font-bold px-3 py-1.5 rounded-xl uppercase tracking-wider">Example</span>
+          </div>
+        </div>
+
+        <div class="mt-3 bg-sage/30 border border-olive/30 p-3.5 rounded-2xl flex items-center justify-between">
+          <div>
+            <span class="text-[10px] uppercase font-bold text-deepForest block">FOUNDING PARTNER</span>
+            <p class="font-bold text-sm">Burritos</p>
+          </div>
+          <span class="text-sm font-serif text-deepForest">Deal at launch</span>
+        </div>
+
+        <div class="mt-4 p-3 bg-cream rounded-2xl border border-darkBrown/15 text-center">
+          <p class="text-[11px] font-medium text-darkBrown/80">⚡ Weak signal in the canteen? Built to keep working with patchy network.</p>
+        </div>
+      </div>
+      <div class="absolute -bottom-6 right-0 sm:-right-6 bg-terracotta text-cream px-5 py-3 rounded-2xl border-2 border-darkBrown shadow-2xl -rotate-2">
+        <p class="text-[10px] font-mono uppercase tracking-wider text-warmBeige">Example savings</p>
+        <p class="text-2xl font-serif">₹1,240</p>
+        <span class="text-[10px] text-warmBeige font-medium">Illustrative only</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 2. LAUNCH DROPS (2-Tier Showcase with Pinned Horizontal-Scroll) -->
+<section id="drops" class="relative bg-warmBeige">
+  <!-- Pinned 100vh Viewport -->
+  <div id="drops-pin" class="sticky top-0 h-screen w-full overflow-hidden flex flex-col justify-between pt-8 pb-6 px-6 sm:px-12 border-b-4 border-darkBrown">
+    
+    <!-- Top Header + Corner 3D Burger -->
+    <div class="max-w-7xl w-full mx-auto flex items-center justify-between gap-4 relative z-30 pt-2">
+      <div>
+        <span class="text-xs font-mono font-bold uppercase tracking-wider text-terracotta">DAY-1 CAMPUS CATALOG</span>
+        <h2 class="text-3xl sm:text-5xl font-serif text-deepForest mt-1">Sneak Peek: What Drops First</h2>
+        <p class="text-darkBrown/80 text-xs sm:text-sm mt-0.5">Scroll to explore. Active deal is spotlighted below.</p>
+      </div>
+
+      <!-- Docked Corner 3D Burger -->
+      <div class="shrink-0 w-24 h-24 sm:w-28 sm:h-28 relative flex items-center justify-center">
+        <model-viewer class="food w-full h-full pointer-events-none select-none" src="models/whopper.glb" poster="burger.png" alt="Burger" loading="lazy" camera-orbit="0deg 72deg auto" interpolation-decay="60" environment-image="neutral" exposure="1.15" shadow-intensity="0.8" shadow-softness="1" disable-zoom disable-pan interaction-prompt="none" data-pitch="72" data-k="1" style="display:block;--poster-color:transparent;background:transparent">
+          <img src="burger.png" alt="Burger" class="w-full h-full object-contain" />
+        </model-viewer>
+      </div>
+    </div>
+
+    <!-- TIER 1: Top Sliding Track (3-4 Cards visible at a time) -->
+    <div class="w-full overflow-hidden relative z-20 py-2">
+      <div id="drops-track" class="flex gap-4 sm:gap-6 items-stretch will-change-transform w-max pl-4 sm:pl-8 pr-16">
+        
+        <!-- Top Card 0 -->
+        <div data-deal="0" class="mini-deal-card w-[230px] sm:w-[280px] shrink-0 ticket-cutout cutout-beige bg-cream border-2 border-darkBrown p-4 rounded-2xl shadow-md transition-all duration-300 cursor-pointer">
+          <div class="flex justify-between items-start">
+            <span class="bg-deepForest text-cream text-[9px] font-bold uppercase px-2 py-0.5 rounded">Cafe</span>
+            <span class="font-mono text-[10px] font-bold text-terracotta bg-terracotta/10 px-1.5 py-0.5 rounded">FOUNDING</span>
+          </div>
+          <h4 class="text-xl font-serif text-terracotta mt-2">Deal TBA</h4>
+          <p class="text-sm font-bold text-deepForest truncate">Asado Resto Cafe</p>
+        </div>
+
+        <!-- Top Card 1 -->
+        <div data-deal="1" class="mini-deal-card w-[230px] sm:w-[280px] shrink-0 ticket-cutout cutout-beige bg-cream border-2 border-darkBrown p-4 rounded-2xl shadow-md transition-all duration-300 cursor-pointer">
+          <div class="flex justify-between items-start">
+            <span class="bg-deepForest text-cream text-[9px] font-bold uppercase px-2 py-0.5 rounded">Food</span>
+            <span class="font-mono text-[10px] font-bold text-terracotta bg-terracotta/10 px-1.5 py-0.5 rounded">FOUNDING</span>
+          </div>
+          <h4 class="text-xl font-serif text-terracotta mt-2">Deal TBA</h4>
+          <p class="text-sm font-bold text-deepForest truncate">Hot Chick</p>
+        </div>
+
+        <!-- Top Card 2 -->
+        <div data-deal="2" class="mini-deal-card w-[230px] sm:w-[280px] shrink-0 ticket-cutout cutout-beige bg-cream border-2 border-darkBrown p-4 rounded-2xl shadow-md transition-all duration-300 cursor-pointer">
+          <div class="flex justify-between items-start">
+            <span class="bg-deepForest text-cream text-[9px] font-bold uppercase px-2 py-0.5 rounded">Food</span>
+            <span class="font-mono text-[10px] font-bold text-terracotta bg-terracotta/10 px-1.5 py-0.5 rounded">FOUNDING</span>
+          </div>
+          <h4 class="text-xl font-serif text-terracotta mt-2">Deal TBA</h4>
+          <p class="text-sm font-bold text-deepForest truncate">PJs Hot Chick</p>
+        </div>
+
+        <!-- Top Card 3 -->
+        <div data-deal="3" class="mini-deal-card w-[230px] sm:w-[280px] shrink-0 ticket-cutout cutout-beige bg-cream border-2 border-darkBrown p-4 rounded-2xl shadow-md transition-all duration-300 cursor-pointer">
+          <div class="flex justify-between items-start">
+            <span class="bg-deepForest text-cream text-[9px] font-bold uppercase px-2 py-0.5 rounded">Food</span>
+            <span class="font-mono text-[10px] font-bold text-terracotta bg-terracotta/10 px-1.5 py-0.5 rounded">FOUNDING</span>
+          </div>
+          <h4 class="text-xl font-serif text-terracotta mt-2">Deal TBA</h4>
+          <p class="text-sm font-bold text-deepForest truncate">Burritos</p>
+        </div>
+
+        <!-- Top Card 4 -->
+        <div data-deal="4" class="mini-deal-card w-[230px] sm:w-[280px] shrink-0 ticket-cutout cutout-beige bg-cream border-2 border-darkBrown p-4 rounded-2xl shadow-md transition-all duration-300 cursor-pointer">
+          <div class="flex justify-between items-start">
+            <span class="bg-deepForest text-cream text-[9px] font-bold uppercase px-2 py-0.5 rounded">Pizza</span>
+            <span class="font-mono text-[10px] font-bold text-terracotta bg-terracotta/10 px-1.5 py-0.5 rounded">FOUNDING</span>
+          </div>
+          <h4 class="text-xl font-serif text-terracotta mt-2">Deal TBA</h4>
+          <p class="text-sm font-bold text-deepForest truncate">Maya's Pizzeria</p>
+        </div>
+
+        <!-- Top Card 5 -->
+        <div data-deal="5" class="mini-deal-card w-[230px] sm:w-[280px] shrink-0 ticket-cutout cutout-beige bg-cream border-2 border-darkBrown p-4 rounded-2xl shadow-md transition-all duration-300 cursor-pointer">
+          <div class="flex justify-between items-start">
+            <span class="bg-deepForest text-cream text-[9px] font-bold uppercase px-2 py-0.5 rounded">Food</span>
+            <span class="font-mono text-[10px] font-bold text-terracotta bg-terracotta/10 px-1.5 py-0.5 rounded">FOUNDING</span>
+          </div>
+          <h4 class="text-xl font-serif text-terracotta mt-2">Deal TBA</h4>
+          <p class="text-sm font-bold text-deepForest truncate">Foodie Buddie.in</p>
+        </div>
+
+        <!-- Top Card 6 -->
+        <div data-deal="6" class="mini-deal-card w-[230px] sm:w-[280px] shrink-0 ticket-cutout cutout-beige bg-cream border-2 border-darkBrown p-4 rounded-2xl shadow-md transition-all duration-300 cursor-pointer">
+          <div class="flex justify-between items-start">
+            <span class="bg-deepForest text-cream text-[9px] font-bold uppercase px-2 py-0.5 rounded">Pizza</span>
+            <span class="font-mono text-[10px] font-bold text-terracotta bg-terracotta/10 px-1.5 py-0.5 rounded">FOUNDING</span>
+          </div>
+          <h4 class="text-xl font-serif text-terracotta mt-2">Deal TBA</h4>
+          <p class="text-sm font-bold text-deepForest truncate">RB's Woodfired Pizza</p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- TIER 2: Bottom Spotlight Stage (Big 1-by-1 Ticket Card) -->
+    <div class="w-full flex-1 flex items-center justify-center my-auto py-2 relative z-20">
+      <div id="big-ticket" class="w-full max-w-3xl ticket-cutout cutout-beige bg-cream border-4 border-darkBrown p-6 sm:p-9 rounded-[36px] shadow-2xl transition-all duration-300">
+        
+        <!-- Header Info -->
+        <div class="flex items-center justify-between pb-3 border-b-2 border-dashed border-darkBrown/20">
+          <div class="flex items-center gap-3">
+            <span id="big-category" class="bg-deepForest text-cream text-xs font-bold uppercase px-3 py-1 rounded-full">CAFE</span>
+            <span class="bg-terracotta/15 text-terracotta text-xs font-mono font-bold px-3 py-1 rounded-full">FOUNDING PARTNER</span>
+          </div>
+          <span id="big-distance" class="text-xs font-mono font-bold text-olive bg-warmBeige px-3 py-1 rounded-full border border-darkBrown/15">📍 3 MIN FROM HOSTEL</span>
+        </div>
+
+        <!-- Center Deal Showcase -->
+        <div class="py-5 sm:py-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div>
+            <h3 id="big-deal" class="text-4xl sm:text-5xl font-serif text-terracotta leading-tight">Deal TBA</h3>
+            <h4 id="big-name" class="text-2xl sm:text-3xl font-serif text-deepForest mt-1">Asado Resto Cafe</h4>
+            <p id="big-desc" class="text-xs sm:text-sm text-darkBrown/80 mt-2 max-w-lg font-medium leading-relaxed">
+              Specialty cold brew, artisan burgers & loaded fries. Student pass unlocks instant counter discount on launch day.
+            </p>
+          </div>
+          <div class="text-right sm:border-l-2 sm:border-dashed sm:border-darkBrown/20 sm:pl-6 shrink-0">
+            <span class="text-xs font-mono uppercase tracking-widest text-darkBrown/60 font-bold block">DISCOUNT PASS</span>
+            <span class="text-2xl sm:text-3xl font-serif text-deepForest font-bold">DAY 1</span>
+            <span class="block text-[10px] text-olive font-mono font-bold mt-0.5">UNLOCK AT COUNTER</span>
+          </div>
+        </div>
+
+        <!-- Footer / Tear Line -->
+        <div class="pt-3 border-t-2 border-dashed border-darkBrown/20 flex items-center justify-between text-xs font-semibold">
+          <span class="text-darkBrown/70 font-mono">⚡ No coupon codes • Just flash your pass screen</span>
+          <span class="bg-deepForest text-cream px-4 py-1.5 rounded-xl font-bold uppercase tracking-wider text-[11px]">Revealed at Launch</span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Bottom Progress Track -->
+    <div class="max-w-7xl w-full mx-auto flex items-center justify-between text-xs font-mono font-bold text-deepForest/70 relative z-30 pt-1">
+      <span id="deal-counter">DEAL 1 OF 7 • SCROLL DOWN TO SWITCH</span>
+      <div class="w-40 bg-darkBrown/15 h-2 rounded-full overflow-hidden border border-darkBrown/20">
+        <div id="drops-progress-bar" class="bg-terracotta h-full w-0 transition-all duration-100"></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- 3. RADAR -->
+<section id="radar" class="py-24 bg-deepForest text-cream border-y-4 border-darkBrown">
+  <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+    <div class="lg:col-span-5 space-y-6">
+      <span class="text-xs font-mono font-bold uppercase tracking-wider text-warmBeige">WALKING DISTANCE RADAR</span>
+      <h2 class="text-4xl sm:text-5xl font-serif text-cream leading-tight">Everything is within walking distance.</h2>
+      <p class="text-sage leading-relaxed">No ordering from 12 km away with ₹60 delivery fees. DisconDude turns on a hyper-local radar for spots you can walk to in slippers between classes.</p>
+      <div class="space-y-3 pt-2">
+        <div class="flex items-center justify-between p-4 bg-cream text-darkBrown rounded-2xl border-2 border-darkBrown">
+          <div class="flex items-center gap-3">
+            <span class="w-8 h-8 rounded-xl bg-deepForest text-cream font-bold flex items-center justify-center text-sm">A</span>
+            <div><p class="font-bold text-sm text-deepForest">Asado Resto Cafe</p><p class="text-xs text-darkBrown/70">Founding partner</p></div>
+          </div>
+          <span class="text-xs font-bold bg-warmBeige text-darkBrown px-3 py-1 rounded-full border border-darkBrown/20">Deal TBA</span>
+        </div>
+        <div class="flex items-center justify-between p-4 bg-cream text-darkBrown rounded-2xl border-2 border-darkBrown">
+          <div class="flex items-center gap-3">
+            <span class="w-8 h-8 rounded-xl bg-olive text-cream font-bold flex items-center justify-center text-sm">M</span>
+            <div><p class="font-bold text-sm text-deepForest">Maya's Pizzeria</p><p class="text-xs text-darkBrown/70">Founding partner</p></div>
+          </div>
+          <span class="text-xs font-bold bg-warmBeige text-darkBrown px-3 py-1 rounded-full border border-darkBrown/20">Deal TBA</span>
+        </div>
+        <div class="flex items-center justify-between p-4 bg-cream text-darkBrown rounded-2xl border-2 border-darkBrown">
+          <div class="flex items-center gap-3">
+            <span class="w-8 h-8 rounded-xl bg-terracotta text-cream font-bold flex items-center justify-center text-sm">R</span>
+            <div><p class="font-bold text-sm text-deepForest">RB's Woodfired Pizza</p><p class="text-xs text-darkBrown/70">Founding partner</p></div>
+          </div>
+          <span class="text-xs font-bold bg-warmBeige text-darkBrown px-3 py-1 rounded-full border border-darkBrown/20">Deal TBA</span>
+        </div>
+        <p class="text-[11px] text-sage">+ 4 more founding partners. Positions on the radar are illustrative.</p>
+      </div>
+    </div>
+
+    <div class="lg:col-span-7 flex justify-center">
+      <div class="relative w-full max-w-lg aspect-square bg-[#1D3B30] border-4 border-darkBrown rounded-[48px] p-8 flex items-center justify-center overflow-hidden shadow-2xl" role="img" aria-label="Radar showing nearby partner spots around the hostel gate">
+        <model-viewer class="food absolute -top-2 right-0 w-72 h-60 z-20 pointer-events-none select-none" src="models/fries.glb" poster="fries.png" alt="Fries with ketchup" loading="lazy" camera-orbit="0deg 58deg auto" interpolation-decay="60" environment-image="neutral" exposure="1.15" shadow-intensity="0.8" shadow-softness="1" disable-zoom disable-pan interaction-prompt="none" data-pitch="58" data-k="2" style="display:block;--poster-color:transparent;background:transparent"><img src="fries.png" alt="Fries with ketchup" class="w-full h-full object-contain" /></model-viewer>
+        <div class="absolute w-[85%] h-[85%] border border-olive/40 rounded-full"></div>
+        <div class="absolute w-[65%] h-[65%] border border-olive/60 rounded-full"></div>
+        <div class="absolute w-[45%] h-[45%] border border-warmBeige/30 rounded-full"></div>
+        <div class="absolute w-[20%] h-[20%] border-2 border-warmBeige rounded-full bg-warmBeige/10 flex items-center justify-center">
+          <span class="w-3.5 h-3.5 rounded-full bg-warmBeige shadow-[0_0_15px_#FBECCB]"></span>
+        </div>
+        <!-- Rotating sweep -->
+        <div class="absolute w-[85%] h-[85%] rounded-full animate-sweep pointer-events-none bg-[conic-gradient(from_0deg_at_50%_50%,transparent_0deg,transparent_270deg,rgba(251,236,203,0.28)_360deg)]"></div>
+
+        <!-- Pins (illustrative positions) -->
+        <div class="absolute top-[42%] left-[12%] bg-warmBeige text-deepForest font-bold text-xs px-3 py-1 rounded-full border border-darkBrown shadow-md">Asado Resto Cafe</div>
+        <div class="absolute top-[17%] left-[8%] bg-sage text-deepForest font-bold text-xs px-3 py-1 rounded-full border border-darkBrown shadow-md">Maya's Pizzeria</div>
+        <div class="absolute bottom-[20%] left-[26%] bg-terracotta text-cream font-bold text-xs px-3 py-1 rounded-full border border-darkBrown shadow-md">RB's Woodfired</div>
+
+        <div class="absolute bottom-6 bg-cream text-deepForest border border-darkBrown px-4 py-1.5 rounded-full text-[11px] font-mono font-bold uppercase tracking-wider">📍 YOU'RE HERE • HOSTEL GATE</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. HOW IT WORKS -->
+<section id="how" class="py-24 max-w-7xl mx-auto px-6">
+  <div class="text-center max-w-2xl mx-auto mb-16">
+    <span class="text-xs font-mono font-bold uppercase tracking-wider text-terracotta">COUNTER FLOW</span>
+    <h2 class="text-4xl sm:text-5xl font-serif text-deepForest mt-1">How It Works in 30 Seconds</h2>
+    <p class="text-darkBrown/80 mt-2">Zero coupon codes. Designed so cashiers don't get annoyed with long lines.</p>
+  </div>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <div class="bg-cream border-2 border-darkBrown p-8 rounded-3xl shadow-md">
+      <div class="w-12 h-12 rounded-2xl bg-deepForest text-cream font-serif text-2xl flex items-center justify-center mb-6 shadow">1</div>
+      <h3 class="text-xl font-serif text-deepForest">Order as usual</h3>
+      <p class="text-darkBrown/80 text-sm mt-3 leading-relaxed">Walk up and order your cup of tea, snacks, or stationery. No need to inform the cashier beforehand.</p>
+    </div>
+    <div class="bg-cream border-2 border-darkBrown p-8 rounded-3xl shadow-md">
+      <div class="w-12 h-12 rounded-2xl bg-terracotta text-cream font-serif text-2xl flex items-center justify-center mb-6 shadow">2</div>
+      <h3 class="text-xl font-serif text-deepForest">Scan counter QR</h3>
+      <p class="text-darkBrown/80 text-sm mt-3 leading-relaxed">Open DisconDude and aim your camera at the acrylic QR stand on the counter. The shop is recognized instantly.</p>
+    </div>
+    <div class="bg-cream border-2 border-darkBrown p-8 rounded-3xl shadow-md">
+      <div class="w-12 h-12 rounded-2xl bg-olive text-cream font-serif text-2xl flex items-center justify-center mb-6 shadow">3</div>
+      <h3 class="text-xl font-serif text-deepForest">Show the green screen</h3>
+      <p class="text-darkBrown/80 text-sm mt-3 leading-relaxed">Your phone turns green with the discounted price, a live clock and a moving stripe, so the cashier knows it's not a screenshot. Pay and head out.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 5. PASS -->
+<section id="pass" class="py-24 bg-cream border-y-4 border-darkBrown">
+  <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+    <div class="lg:col-span-6 flex justify-center">
+      <div class="w-full max-w-md bg-deepForest text-cream border-4 border-darkBrown rounded-[36px] p-6 sm:p-8 shadow-2xl">
+        <div class="flex justify-between items-center pb-4 border-b border-olive/40">
+          <span class="bg-warmBeige text-deepForest text-[10px] font-mono font-bold uppercase px-3 py-1 rounded-full">✓ VERIFIED .AC.IN</span>
+          <span class="font-mono text-xs text-sage">SAMPLE PASS</span>
+        </div>
+        <div class="my-6">
+          <h3 class="text-3xl font-serif text-warmBeige">Your Name</h3>
+          <p class="text-sm font-semibold text-sage mt-0.5">Your Campus • Your Batch</p>
+          <p class="text-xs text-cream/80 mt-3 font-mono">LEVEL 2 • FOUNDING SAVER</p>
+          <div class="w-full bg-[#1A342B] rounded-full h-3 mt-2 border border-olive/50 overflow-hidden">
+            <div class="bg-mutedGold h-full w-1/4 rounded-full"></div>
+          </div>
+          <span class="text-[11px] font-mono text-sage block mt-1.5">50 XP READY TO REDEEM ON DAY 1</span>
+        </div>
+        <div class="bg-[#1D3B30] p-4 rounded-2xl border border-olive/40">
+          <p class="text-xs font-mono uppercase text-warmBeige mb-3 font-bold">Badges you can earn</p>
+          <div class="grid grid-cols-3 gap-2 text-center text-xs">
+            <div class="bg-warmBeige text-darkBrown p-2 rounded-xl font-bold">★ Founding Fan</div>
+            <div class="bg-sage text-deepForest p-2 rounded-xl font-bold">☕ Chai Regular</div>
+            <div class="bg-terracotta text-cream p-2 rounded-xl font-bold">🔥 Streaks</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="lg:col-span-6 space-y-6">
+      <span class="text-xs font-mono font-bold uppercase tracking-wider text-terracotta">PERMANENT STATUS</span>
+      <h2 class="text-4xl sm:text-5xl font-serif text-deepForest leading-tight">Claim your Founding Student Pass.</h2>
+      <p class="text-darkBrown/80 leading-relaxed">Students who join the waitlist before launch receive the permanent <strong class="text-deepForest">Founding Fan Badge</strong> and start at Level 2 with +50 XP ready to redeem on Day 1.</p>
+      <ul class="space-y-4 pt-2 text-sm font-semibold text-deepForest">
+        <li class="flex items-center gap-3"><span class="w-6 h-6 rounded-full bg-terracotta text-cream flex items-center justify-center text-xs" aria-hidden="true">✓</span>Exclusive 7-day streak rewards (Free chai after 7 scans)</li>
+        <li class="flex items-center gap-3"><span class="w-6 h-6 rounded-full bg-terracotta text-cream flex items-center justify-center text-xs" aria-hidden="true">✓</span>Annual "Semester Wrapped" card ready to share on Instagram</li>
+        <li class="flex items-center gap-3"><span class="w-6 h-6 rounded-full bg-terracotta text-cream flex items-center justify-center text-xs" aria-hidden="true">✓</span>Offline-friendly design for low-signal spots like canteen basements</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 6. MERCHANTS -->
+<section id="partners" class="py-20 bg-warmBeige">
+  <div class="max-w-4xl mx-auto px-6 text-center">
+    <div class="bg-cream border-4 border-darkBrown p-8 sm:p-12 rounded-[40px] shadow-xl">
+      <span class="text-xs font-mono font-bold uppercase tracking-wider text-terracotta">FOR LOCAL MERCHANTS & CAFES</span>
+      <h2 class="text-3xl sm:text-4xl font-serif text-deepForest mt-2">Run a cafe, bakery or food stall near campus?</h2>
+      <p class="text-darkBrown/80 max-w-xl mx-auto mt-4 text-sm sm:text-base leading-relaxed">Fill your off-peak hours with verified college student footfall. No high commissions, no POS hardware needed.</p>
+      <div class="mt-8">
+        <a href="mailto:partners@discondude.app?subject=Cafe%20Partnership" class="bg-deepForest hover:bg-[#1D3B30] text-cream font-bold px-8 py-4 rounded-2xl text-sm transition inline-block shadow-md">Become a Day-1 Founding Partner →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="py-12 bg-deepForest text-cream border-t-4 border-darkBrown text-xs">
+  <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-sage">
+    <div>
+      <p class="text-cream">DisconDude • Made by students, for students.</p>
+      <p class="text-[11px] mt-1 max-w-xl">3D model "Fries with ketchup" by <a class="underline hover:text-warmBeige" href="https://sketchfab.com/Adam.White">Adam.White</a> (<a class="underline hover:text-warmBeige" href="https://creativecommons.org/licenses/by/4.0/">CC-BY-4.0</a>), via <a class="underline hover:text-warmBeige" href="https://sketchfab.com/3d-models/fries-with-ketchup-98d460cd9a9b499b89bb7ecfeeb2181b">Sketchfab</a>.</p>
+    </div>
+    <div class="flex gap-6">
+      <a href="#vibe-check-card" class="hover:text-warmBeige transition">Back to Top ↑</a>
+      <a href="mailto:hello@discondude.app" class="hover:text-warmBeige transition">Contact Team</a>
+    </div>
+  </div>
+</footer>
+
+<!-- 3D MODEL VIEWER SCRIPT -->
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+
+<!-- APP SCRIPTS -->
+<script>
+// --- 1. Form & Mascot Validation Controller ---
+const $ = id => document.getElementById(id);
+const guardImg = $('guardImg'), guardFallback = $('guardFallback'), mascotSpeech = $('mascotSpeech');
+const feedbackText = $('feedbackText'), formCard = $('formCard'), badgeStatus = $('badgeStatus');
+const emailInput = $('studentEmail');
+const BADGE_BASE = 'text-[10px] font-mono font-bold uppercase px-3 py-1 rounded-full ';
+const IMGS = { peeking:['mascot-peek.png','👀'], annoyed:['mascot-stool.png','😒'], success:['mascot-noodles.png','🍜'] };
+const COMMERCIAL = ['gmail.com','yahoo.com','outlook.com','hotmail.com','icloud.com','proton.me','protonmail.com','rediffmail.com','live.com'];
+let noCollegeEmail = false;
+
+function getDomain(email) {
+  const m = email.trim().toLowerCase().match(/^[^\s@]+@([^\s@]+)$/);
+  return m ? m[1] : '';
+}
+function isAcademic(domain) {
+  if (!domain) return false;
+  if (isCommercial(domain)) return false;
+  return domain.endsWith('.ac.in') || domain.endsWith('.edu.in') || domain.endsWith('.edu');
+}
+function isCommercial(domain) { 
+  return COMMERCIAL.some(d => domain === d || domain.endsWith('.' + d)); 
+}
+
+function setFeedback(html, cls) { feedbackText.innerHTML = html; feedbackText.className = 'text-xs mt-3 ' + cls; }
+function setBadge(text, cls) { badgeStatus.textContent = text; badgeStatus.className = BADGE_BASE + cls; }
+
+guardImg.addEventListener('error', () => { guardImg.classList.add('hidden'); guardFallback.classList.remove('hidden'); });
+guardImg.addEventListener('load', () => { guardImg.classList.remove('hidden'); guardFallback.classList.add('hidden'); });
+
+function setGuard(state, speech) {
+  const [src, emoji] = IMGS[state];
+  guardFallback.textContent = emoji;
+  guardImg.src = src;
+  guardImg.classList.add('animate-pop');
+  setTimeout(() => guardImg.classList.remove('animate-pop'), 300);
+  mascotSpeech.textContent = speech;
+}
+
+function resetIdle() {
+  setGuard('peeking', '"psst... what\'s your college email?"');
+  setFeedback(noCollegeEmail
+    ? 'No college email? Join with any email. We\'ll verify you manually for the Founding Fan badge.'
+    : 'Only <span class="font-mono font-bold text-deepForest">.ac.in</span> or official university emails unlock the Founding Fan badge.', 'font-semibold text-darkBrown/80');
+  setBadge(noCollegeEmail ? '✉️ MANUAL VERIFICATION' : '🔒 STUDENT PASS GATE', 'bg-warmBeige border border-darkBrown/20 text-deepForest');
+}
+
+emailInput.addEventListener('input', () => {
+  formCard.classList.remove('animate-shake');
+  const email = emailInput.value.trim();
+  if (!email) return resetIdle();
+  const domain = getDomain(email);
+
+  if (noCollegeEmail) {
+    setGuard('peeking', '"no worries, we\'ll check manually."');
+    return;
+  }
+  if (domain && isCommercial(domain)) {
+    setGuard('annoyed', '"bruh... that is not a college email."');
+    setFeedback('❌ That\'s not a college email. Try your official <strong>.ac.in</strong>, or use the link below if your college doesn\'t have one.', 'font-bold text-terracotta');
+    setBadge('⚠️ VIBE CHECK FAILED', 'bg-terracotta/20 border border-terracotta text-terracotta');
+  } else if (isAcademic(domain)) {
+    setGuard('peeking', '"ooh, now we\'re talking! hit reserve."');
+    setFeedback('✨ Academic domain detected! Hit reserve to lock in.', 'font-bold text-deepForest');
+    setBadge('✓ ACADEMIC DOMAIN RECOGNIZED', 'bg-sage/40 border border-deepForest text-deepForest');
+  } else {
+    setGuard('peeking', '"waiting for that .ac.in..."');
+    setFeedback('Typing your student handle...', 'font-semibold text-darkBrown/80');
+    setBadge('🔒 STUDENT PASS GATE', 'bg-warmBeige border border-darkBrown/20 text-deepForest');
+  }
+});
+
+$('noCollegeBtn').addEventListener('click', () => {
+  noCollegeEmail = !noCollegeEmail;
+  $('noCollegeBtn').textContent = noCollegeEmail ? 'Actually, I do have a college email' : "My college doesn't have a .ac.in email";
+  resetIdle();
+});
+
+$('waitlistForm').addEventListener('submit', e => {
+  e.preventDefault();
+  const email = emailInput.value.trim();
+  const domain = getDomain(email);
+  if (!domain) {
+    setFeedback('Please enter a valid email address.', 'font-bold text-terracotta');
+    return;
+  }
+  const verified = isAcademic(domain);
+  if (!verified && !noCollegeEmail) {
+    formCard.classList.add('animate-shake');
+    setGuard('annoyed', '"nahh. college emails only, bestie."');
+    setFeedback('❌ Rejected! Enter your official campus email, or use the link below if your college doesn\'t have one.', 'font-bold text-terracotta');
+    return;
+  }
+
+  setGuard('success', '"Main character energy activated!"');
+  $('cardBody').innerHTML = `
+    <div class="text-center py-6 space-y-3 animate-pop" aria-live="polite">
+      <span class="text-3xl" aria-hidden="true">🍜</span>
+      <h3 class="text-2xl font-serif text-deepForest">You're on the list!</h3>
+      <p id="successMsg" class="text-xs font-semibold text-darkBrown/80 max-w-sm mx-auto"></p>
+      <div class="pt-2"><span class="inline-block bg-warmBeige border border-darkBrown/30 px-4 py-2 rounded-xl text-xs font-mono font-bold text-deepForest break-all">
+        Magic link will be sent to <span id="successEmail"></span></span></div>
+    </div>`;
+  $('successEmail').textContent = email;
+  $('successMsg').textContent = verified
+    ? 'Your Founding Fan Badge and +50 XP will be unlocked when you confirm your email.'
+    : 'We\'ll verify your student status manually before awarding the Founding Fan Badge.';
+});
+
+// --- 2. Scroll-Driven 360° Spin for 3D Food Models ---
+(function(){
+  const els=[...document.querySelectorAll('model-viewer.food')];
+  if(!els.length) return;
+  const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const vis=new Set();
+  const io=new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting?vis.add(e.target):vis.delete(e.target)),{rootMargin:'150px'});
+  els.forEach(el=>io.observe(el));
+  let t=0;
+  (function loop(){
+    requestAnimationFrame(loop); t+=.016;
+    vis.forEach(el=>{
+      const theta=reduce?25:(scrollY*.3+(+el.dataset.k)*70+Math.sin(t*.8)*5);
+      el.cameraOrbit=theta.toFixed(1)+'deg '+el.dataset.pitch+'deg auto';
+    });
+  })();
+})();
+
+// --- 3. Synchronized 2-Tier Drops Showcase Engine ---
+(function initDealsShowcase() {
+  const wrapper = document.getElementById('drops');
+  const track = document.getElementById('drops-track');
+  const progressBar = document.getElementById('drops-progress-bar');
+  const counterText = document.getElementById('deal-counter');
+
+  // Big Card elements
+  const bigCategory = document.getElementById('big-category');
+  const bigDistance = document.getElementById('big-distance');
+  const bigDeal = document.getElementById('big-deal');
+  const bigName = document.getElementById('big-name');
+  const bigDesc = document.getElementById('big-desc');
+  const bigTicket = document.getElementById('big-ticket');
+  const miniCards = document.querySelectorAll('.mini-deal-card');
+
+  if (!wrapper || !track) return;
+
+  // Rich Deal Data
+  const dealsData = [
+    {
+      name: "Asado Resto Cafe",
+      category: "CAFE",
+      deal: "Deal TBA",
+      distance: "📍 3 MIN FROM HOSTEL",
+      desc: "Specialty cold brew, artisan burgers & loaded fries. Student pass unlocks instant counter discount on Day-1 launch."
+    },
+    {
+      name: "Hot Chick",
+      category: "FOOD",
+      deal: "Deal TBA",
+      distance: "📍 5 MIN WALK FROM MAIN GATE",
+      desc: "Crispy fried chicken, zesty rolls & shakes. Exclusive student-only combo pricing dropping at launch."
+    },
+    {
+      name: "PJs Hot Chick",
+      category: "FOOD",
+      deal: "Deal TBA",
+      distance: "📍 4 MIN WALK NEAR JUNCTION",
+      desc: "Late-night hot wings, spicy popcorn chicken and snacks. Flash green screen at counter for instant pass perks."
+    },
+    {
+      name: "Burritos",
+      category: "FOOD",
+      deal: "Deal TBA",
+      distance: "📍 6 MIN FROM HOSTEL BLOCK",
+      desc: "Stuffed Mexican rice bowls, loaded burritos & house dips. Day-1 student pass unlocks exclusive combo saver."
+    },
+    {
+      name: "Maya's Pizzeria",
+      category: "PIZZA",
+      deal: "Deal TBA",
+      distance: "📍 2 MIN FROM HOSTEL GATE",
+      desc: "Thin-crust woodfired pizzas, cheesy garlic knots & beverages. Campus Founding Partner with exclusive Day-1 slice deal."
+    },
+    {
+      name: "Foodie Buddie.in",
+      category: "FOOD",
+      deal: "Deal TBA",
+      distance: "📍 NEAR CANTEEN QUAD",
+      desc: "Quick bites, parottas, hot snacks & refreshing cold beverages. Everyday budget-friendly student rates guaranteed."
+    },
+    {
+      name: "RB's Woodfired Pizza",
+      category: "PIZZA",
+      deal: "Deal TBA",
+      distance: "📍 5 MIN WALK TOWARDS TOWN",
+      desc: "Authentic Neapolitan sourdough crust, premium cheese pull & artisanal mocktails. Special Day-1 student unlock."
+    }
+  ];
+
+  let activeIndex = -1;
+
+  function updateBigCard(idx) {
+    if (idx === activeIndex || !dealsData[idx]) return;
+    activeIndex = idx;
+
+    // Subtle pop animation
+    bigTicket.style.opacity = '0.7';
+    bigTicket.style.transform = 'scale(0.98)';
+    
+    setTimeout(() => {
+      const data = dealsData[idx];
+      bigCategory.textContent = data.category;
+      bigDistance.textContent = data.distance;
+      bigDeal.textContent = data.deal;
+      bigName.textContent = data.name;
+      bigDesc.textContent = data.desc;
+      if (counterText) counterText.textContent = `DEAL ${idx + 1} OF ${dealsData.length} • SCROLL TO SWITCH`;
+
+      bigTicket.style.opacity = '1';
+      bigTicket.style.transform = 'scale(1)';
+    }, 120);
+
+    // Highlight active mini-card in the top strip
+    miniCards.forEach((c, i) => {
+      if (i === idx) {
+        c.classList.add('border-terracotta', 'ring-2', 'ring-terracotta/40', 'scale-105', 'bg-warmBeige/40');
+        c.classList.remove('opacity-70');
+      } else {
+        c.classList.remove('border-terracotta', 'ring-2', 'ring-terracotta/40', 'scale-105', 'bg-warmBeige/40');
+        c.classList.add('opacity-70');
+      }
+    });
+  }
+
+  function setDimensions() {
+    // Generates plenty of scroll runway to smoothly browse through all 7 deals
+    const runwayHeight = window.innerHeight * 3.5;
+    wrapper.style.height = `${runwayHeight}px`;
+  }
+
+  function handleScroll() {
+    const rect = wrapper.getBoundingClientRect();
+    const maxScroll = wrapper.offsetHeight - window.innerHeight;
+
+    if (rect.top <= 0 && rect.bottom >= window.innerHeight) {
+      const scrolled = -rect.top;
+      const progress = Math.min(Math.max(scrolled / maxScroll, 0), 1);
+
+      // Slide top strip
+      const maxTranslate = track.scrollWidth - window.innerWidth + 80;
+      track.style.transform = `translate3d(-${progress * Math.max(maxTranslate, 0)}px, 0, 0)`;
+
+      if (progressBar) progressBar.style.width = `${progress * 100}%`;
+
+      // Select active index from 0 to 6 based on scroll progress
+      const targetIndex = Math.min(Math.floor(progress * dealsData.length), dealsData.length - 1);
+      updateBigCard(targetIndex);
+
+    } else if (rect.top > 0) {
+      track.style.transform = `translate3d(0px, 0, 0)`;
+      if (progressBar) progressBar.style.width = `0%`;
+      updateBigCard(0);
+    } else if (rect.bottom < window.innerHeight) {
+      const maxTranslate = track.scrollWidth - window.innerWidth + 80;
+      track.style.transform = `translate3d(-${Math.max(maxTranslate, 0)}px, 0, 0)`;
+      if (progressBar) progressBar.style.width = `100%`;
+      updateBigCard(dealsData.length - 1);
+    }
+  }
+
+  // Allow clicking on any top mini card to jump directly to it
+  miniCards.forEach((card, idx) => {
+    card.addEventListener('click', () => {
+      const maxScroll = wrapper.offsetHeight - window.innerHeight;
+      const targetScroll = wrapper.offsetTop + (idx / dealsData.length) * maxScroll;
+      window.scrollTo({ top: targetScroll, behavior: 'smooth' });
+    });
+  });
+
+  window.addEventListener('scroll', handleScroll, { passive: true });
+  window.addEventListener('resize', () => {
+    setDimensions();
+    handleScroll();
+  });
+
+  setDimensions();
+  updateBigCard(0);
+})();
+</script>
+</body>
+</html>

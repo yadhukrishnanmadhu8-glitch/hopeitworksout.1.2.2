@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.ticket-cutout { position: relative; }
+.ticket-cutout::before, .ticket-cutout::after {
+  content: '';
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+.cutout-beige::before, .cutout-beige::after { background-color: #FBECCB; }
+.ticket-cutout::before { left: -11px; }
+.ticket-cutout::after { right: -11px; }
+
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #254A3D; }
+::-webkit-scrollbar-thumb { background: #667A4E; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #B96F52; }
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-sweep, .animate-ping, .animate-shake, .animate-pop {
+    animation: none !important;
+  }
+}
+summary::-webkit-details-marker { display: none; }
